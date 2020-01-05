@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+        <section class="features">
+            <figure>
+                    <a href="/predict">
+                        <img alt="Use model API to predict if you survive!" src="{{ url_for('static', filename='images/icon_predict_rd.png') }}">
+                     </a>
+                <figcaption> Predict </figcaption>
+            </figure>
+            <figure>
+
+                <a href="/explain">
+                    <img src="{{ url_for('static', filename='images/icon_explain_rd.png') }}" alt="Explain predictions with LIME">
+                     </a>
+                    <figcaption> Explain </figcaption>
+            </figure>
+            <figure>
+                    <img src="{{ url_for('static', filename='images/icon_documentation_rd.png') }}" alt="Blog">
+                    <figcaption> About </figcaption>
+            </figure>
+        </section>
+
+        <section class="about_project">
+                <div>
+            <h2>About Project</h2></div>
+
+            <div> This is the project called Titanic: from idea to deployment. 
+                Project includes steps:
+                
+                 <ul>
+                     <li>Completing HTML and CSS course for beginners</li>
+                     <li>Adding Flask back end logic</li>
+                     <li>Training ML model</li>
+                     <li>Deploying the website</li>
+                 </ul>
+                
+                </div>
+
+
+        </section>
+
+        <section class="about_me">
+                <div>
+            <h2>About Me</h2></div>
+
+            <div> 
+                my name is patrick
+                
+            </div>
+
+
+        </section>
+{% endblock %}

@@ -1,0 +1,36 @@
+
+<html>
+    <head>
+            <title>
+                Titanic Predictor
+            </title>
+            <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    </head>
+    <body>
+        <header>
+            <nav>
+                <ul>
+                    <li class="logo"><a href="/">Home</a></li>
+                    <!--li><a href="/#about_me">About me</a></li-->
+                    <!--li><a href="/#about_project">About project</a></li-->
+                </ul>
+         </nav>
+        </header>
+
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+        <ul>
+            {% for message in messages %}
+            <li>{{ message }}</li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+        {% endwith %}
+
+        {% block content %}{% endblock %}
+
+            <footer>
+            all rights reserved
+        </footer>
+    </body>
+</html>

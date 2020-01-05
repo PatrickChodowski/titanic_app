@@ -1,0 +1,90 @@
+
+{% extends "base.html" %}
+
+{% block content %}
+
+<section class="predict_form">
+
+    <form action="{{ url_for('predict_survive') }}" method="post" novalidate>
+
+        {{ form.hidden_tag() }}
+        {{ form.csrf_token }}
+
+        <p>
+            {{ form.name.label }}<br>
+            {{ form.name() }}
+            {% for error in form.name.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+        </p>
+
+        <p>
+            {{ form.pclass.label }}<br>
+            {{ form.pclass() }}
+            {% for error in form.pclass.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+        </p>
+
+        <p>
+            {{ form.sex.label }}<br>
+            {{ form.sex() }}
+            {% for error in form.sex.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+        </p>
+
+        <p>
+            {{ form.age.label }}<br>
+            {{ form.age() }}
+            {% for error in form.age.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+        </p>
+
+        <p>
+            {{ form.sibsp.label }}<br>
+            {{ form.sibsp() }}
+            {% for error in form.sibsp.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+        </p>
+
+        <p>
+            {{ form.parch.label }}<br>
+            {{ form.parch() }}
+            {% for error in form.parch.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+        </p>
+
+        <p>
+            {{ form.fare.label }}<br>
+            {{ form.fare() }}
+            {% for error in form.fare.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+        </p>
+
+        <p>
+            {{ form.cabin.label }}<br>
+            {{ form.cabin() }}
+            {% for error in form.cabin.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+        </p>
+
+        <p>
+            {{ form.embarked.label }}<br>
+            {{ form.embarked() }}
+            {% for error in form.embarked.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+        </p>
+
+        <p>{{ form.submit() }}</p>
+    </form>
+
+</section>
+
+{% endblock %}
