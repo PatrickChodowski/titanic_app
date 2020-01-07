@@ -3,12 +3,14 @@
 {% block content %}
 
         <section class="features">
+                
             <figure>
                     <a href="/predict">
                         <img alt="Use model API to predict if you survive!" src="{{ url_for('static', filename='images/icon_predict_rd.png') }}">
                      </a>
                 <figcaption> Predict </figcaption>
             </figure>
+            
             <figure>
 
                 <a href="/explain">
@@ -16,10 +18,15 @@
                      </a>
                     <figcaption> Explain </figcaption>
             </figure>
-            <figure>
+            
+             <figure>
+
+                <a href="https://medium.com/@chodo20/how-i-built-my-first-web-app-project-in-48-hours-e2e6843fe8d5">
                     <img src="{{ url_for('static', filename='images/icon_documentation_rd.png') }}" alt="Blog">
+                     </a>
                     <figcaption> About </figcaption>
             </figure>
+
         </section>
 
         <section class="about_project">
